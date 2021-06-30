@@ -1,4 +1,8 @@
-import pyttsx3
+from gtts import gTTS
+import os
+myText ="happybirthday  parr nayhtet   mangalarpar Nayhtet noght   kyat   ter  lo..sorry..parr .....deadnet tar   su toung pay lite parr tel  . sul  mam  man  yat  parr  cee"
+language= 'en'
+
 
 import colorama
 
@@ -38,15 +42,9 @@ pbar.close()
 print('done')
 
 
-engine = pyttsx3.init('')
-voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[1].id)
-
-def  speak(audio):
-    engine.say(audio)
-    engine.runAndWait()
-
-
+output = gTTS(text=myText, lang=language, slow=False)
+output.save("hh.mp3")
+os.system("start hh.mp3")
 
 
 
@@ -55,14 +53,5 @@ print(Back.LIGHTYELLOW_EX + "--------------------------------------------------c
 print(Back.LIGHTGREEN_EX + "--------------------------------------------------coming soon foreverFA tool---------------------------------------")
 print(Back.LIGHTRED_EX)
 
-if"_main_":
-    speak(
-        "happybirthday  parr nayhtet   mangalarpar Nayhtet noght   kyat   ter  lo..sorry..parr .....deadnet tar   su toung pay lite parr tel  . sul  mam  man  yat  parr  cee")
 
 print(Fore.LIGHTRED_EX + Back.LIGHTWHITE_EX + 'end--wait--for--next--tool----')
-
-
-
-
-
-
