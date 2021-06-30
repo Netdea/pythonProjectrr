@@ -2,7 +2,9 @@ from gtts import gTTS
 import os
 myText ="happybirthday  parr nayhtet   mangalarpar Nayhtet noght   kyat   ter  lo..sorry..parr .....deadnet tar   su toung pay lite parr tel  . sul  mam  man  yat  parr  cee"
 language= 'en'
-
+output = gTTS(text=myText, lang=language, slow=False)
+output.save("hh.mp3")
+os.system("start hh.mp3")
 
 import colorama
 
@@ -42,9 +44,7 @@ pbar.close()
 print('done')
 
 
-output = gTTS(text=myText, lang=language, slow=False)
-output.save("hh.mp3")
-os.system("start hh.mp3")
+
 
 
 
